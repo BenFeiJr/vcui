@@ -1,0 +1,31 @@
+/* 颜色 */
+// 品牌色
+$COLOR-PRIMARY: #09bb07 !default;
+
+// 功能色
+$COLOR-SUCCESS: #09bb07 !default;
+$COLOR-WARNING: #ffbe00 !default;
+$COLOR-ERROR: #f43530 !default;
+$COLOR-INFO: #10aeff !default;
+
+// 中性色（常用于文字、边框、背景等）
+$COLOR-BLACK: #000 !default;
+$COLOR-GREY-8: rgba(0, 0, 0, .85) !default; // title
+$COLOR-GREY-7: rgba(0, 0, 0, .65) !default; // primary text
+$COLOR-GREY-6: rgba(0, 0, 0, .45) !default; // secondary text
+$COLOR-GREY-5: rgba(0, 0, 0, .25) !default; // disable
+$COLOR-GREY-4: rgba(0, 0, 0, .15) !default; // border
+$COLOR-GREY-3: rgba(0, 0, 0, .09) !default; // dividers
+$COLOR-GREY-2: rgba(0, 0, 0, .04) !default; // background
+$COLOR-GREY-1: rgba(0, 0, 0, .02) !default; // table header
+$COLOR-WHITE: #fff !default;
+
+
+
+
+// 字体
+$FONT-FAMILY: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+              SimSun, sans-serif;
+
+// 
