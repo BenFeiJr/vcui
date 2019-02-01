@@ -1,6 +1,5 @@
 import React from 'react';
-import vc from '../vc/vc';
-import Tap from '../touch/touch';
+import touch from '../touch/touch';
 
 class Button extends React.Component {
     constructor (props) {
@@ -9,13 +8,11 @@ class Button extends React.Component {
 
     componentDidMount () {
         const button = document.getElementById('aaa');
-        const aa = new Tap(button);
-        console.log(aa);
-        vc.on(button, 'tap', this.props.onTap);
+        touch(button).on('tap', this.props.onTap);
     }
 
     render () {
-        return (<Button type="button" id="aaa"></Button>);
+        return (<button type="button" id="aaa">{ this.props.children }</button>);
     }
 }
 
