@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: './src/index.tsx',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -13,6 +13,9 @@ module.exports = {
         contentBase: './dist',
         port: '8080',
         publicPath: '/'
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
     module: {
         rules: [
@@ -26,12 +29,16 @@ module.exports = {
                 ]
             },
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 loader: [
-                    'babel-loader',
-                    'eslint-loader'
+                    'awesome-typescript-loader'
                 ]
+            },
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                loader: 'source-map-loader'
             }
         ]
     }
